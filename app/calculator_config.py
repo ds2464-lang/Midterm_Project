@@ -6,11 +6,13 @@ from numbers import Number
 from pathlib import Path
 import os
 from typing import Optional
+
 from dotenv import load_dotenv
+
 from app.exceptions import ConfigurationError
 
 # Load environment variables from a .env file into the program's environment
-load_dotenv
+load_dotenv()
 
 def get_project_root() -> Path:
     # Get the directory of the current file (app/calculator_config.py)
