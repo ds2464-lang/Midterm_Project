@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 
-import pandas as pd
+import pandas as pd # pyright: ignore[reportMissingModuleSource]
 
 from app.calculation import Calculation
 from app.calculator_config import CalculatorConfig
@@ -22,12 +22,8 @@ CalculationResult = Union[Number, str]
 
 
 class Calculator:
-    """
-    Main calculator class implementing multiple design patterns.
-    """
 
     def __init__(self, config: Optional[CalculatorConfig] = None):
-        
         if config is None:
             # Determine the project root directory if no configuration is provided
             current_file = Path(__file__)
@@ -69,7 +65,6 @@ class Calculator:
         logging.info("Calculator initialized with configuration")
 
     def _setup_logging(self) -> None:
-        
         try:
             # Ensure the log directory exists
             os.makedirs(self.config.log_dir, exist_ok=True)
@@ -89,26 +84,21 @@ class Calculator:
             raise
 
     def _setup_directories(self) -> None:
-        
         self.config.history_dir.mkdir(parents=True, exist_ok=True)
 
     def add_observer(self, observer: HistoryObserver) -> None:
-        
         self.observers.append(observer)
         logging.info(f"Added observer: {observer.__class__.__name__}")
 
     def remove_observer(self, observer: HistoryObserver) -> None:
-        
         self.observers.remove(observer)
         logging.info(f"Removed observer: {observer.__class__.__name__}")
 
     def notify_observers(self, calculation: Calculation) -> None:
-        
         for observer in self.observers:
             observer.update(calculation)
 
     def set_operation(self, operation: Operation) -> None:
-        
         self.operation_strategy = operation
         logging.info(f"Set operation: {operation}")
 
@@ -117,7 +107,6 @@ class Calculator:
         a: Union[str, Number],
         b: Union[str, Number]
     ) -> CalculationResult:
-        
         if not self.operation_strategy:
             raise OperationError("No operation set")
 
@@ -164,7 +153,6 @@ class Calculator:
             raise OperationError(f"Operation failed: {str(e)}")
 
     def save_history(self) -> None:
-        
         try:
             # Ensure the history directory exists
             self.config.history_dir.mkdir(parents=True, exist_ok=True)
@@ -198,7 +186,6 @@ class Calculator:
             raise OperationError(f"Failed to save history: {e}")
 
     def load_history(self) -> None:
-        
         try:
             if self.config.history_file.exists():
                 # Read the CSV file into a pandas DataFrame
@@ -227,7 +214,6 @@ class Calculator:
             raise OperationError(f"Failed to load history: {e}")
 
     def get_history_dataframe(self) -> pd.DataFrame:
-       
         history_data = []
         for calc in self.history:
             history_data.append({
@@ -240,21 +226,18 @@ class Calculator:
         return pd.DataFrame(history_data)
 
     def show_history(self) -> List[str]:
-        
         return [
             f"{calc.operation}({calc.operand1}, {calc.operand2}) = {calc.result}"
             for calc in self.history
         ]
 
     def clear_history(self) -> None:
-        
         self.history.clear()
         self.undo_stack.clear()
         self.redo_stack.clear()
         logging.info("History cleared")
 
     def undo(self) -> bool:
-        
         if not self.undo_stack:
             return False
         # Pop the last state from the undo stack
@@ -266,7 +249,6 @@ class Calculator:
         return True
 
     def redo(self) -> bool:
-        
         if not self.redo_stack:
             return False
         # Pop the last state from the redo stack

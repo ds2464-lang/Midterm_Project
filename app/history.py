@@ -7,9 +7,6 @@ from app.calculation import Calculation
 
 
 class HistoryObserver(ABC):
-    """
-    Abstract base class for calculator observers.
-    """
 
     @abstractmethod
     def update(self, calculation: Calculation) -> None:
@@ -19,7 +16,6 @@ class HistoryObserver(ABC):
 class LoggingObserver(HistoryObserver):
 
     def update(self, calculation: Calculation) -> None:
-        
         if calculation is None:
             raise AttributeError("Calculation cannot be None")
         logging.info(
@@ -27,7 +23,6 @@ class LoggingObserver(HistoryObserver):
             f"({calculation.operand1}, {calculation.operand2}) = "
             f"{calculation.result}"
         )
-
 
 class AutoSaveObserver(HistoryObserver):
 

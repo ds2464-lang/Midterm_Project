@@ -8,9 +8,10 @@ from app.exceptions import ValidationError
 
 @dataclass
 class InputValidator:
-
+    
     @staticmethod
     def validate_number(value: Any, config: CalculatorConfig) -> Decimal:
+        
         try:
             if isinstance(value, str):
                 value = value.strip()
