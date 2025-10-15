@@ -1,0 +1,4 @@
+operation,operand1,operand2,result,timestamp
+Addition,2,2,4,2025-10-15T15:44:37.111714
+Root,144,2,12,2025-10-15T15:45:43.798914
+Power,1E+1,2,100,2025-10-15T15:45:59.939357

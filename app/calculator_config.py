@@ -72,7 +72,7 @@ class CalculatorConfig:
         )).resolve()
     
     @property
-    def history_files(self) -> Path:
+    def history_file(self) -> Path:
         return Path(os.getenv(
             'CALCULATOR_HISTORY_FILE',
             str(self.history_dir / "calculator_history.csv")
