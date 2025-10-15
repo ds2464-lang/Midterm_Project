@@ -43,7 +43,7 @@ class Calculation:
         # Retrieve the operation function based on the operation name
         op = operations.get(self.operation)
         if not op:
-            raise OperationError(f"Unkown operation: {self.operation}")
+            raise OperationError(f"Unknown operation: {self.operation}")
         
         try:
             #Execute the operation with the provided operands
@@ -61,10 +61,13 @@ class Calculation:
         raise OperationError("Negative exponents are not supported")
     
     @staticmethod
-    def _raise_inavalid_root(x: Decimal, y: Decimal): # pragma: no cover
-        if y == 0:
+    def _raise_invalid_root(x: Decimal, y: Decimal):
+        if x < 0:
             raise OperationError("Cannot calculate root of negative number")
+        if y == 0:
+            raise OperationError("Cannot calculate root with exponent 0")
         raise OperationError("Invalid root operation")
+
     def to_dict(self) -> Dict[str, Any]:
         return {
             'operation': self.operation,
@@ -89,8 +92,8 @@ class Calculation:
             saved_result = Decimal(data['result'])
             if calc.result != saved_result:
                 logging.warning(
-                    f"Loaded claculation result {saved_result}"
-                    f"differs from computed result {calc.result}"
+                    f"Loaded calculation result {saved_result}"
+                    f" differs from computed result {calc.result}"
                 ) # pragma: no cover
 
             return calc

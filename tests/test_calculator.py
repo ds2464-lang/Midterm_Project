@@ -16,7 +16,7 @@ import logging
 from app.calculation import Calculation
 
 #Fixture to initialize Calculator with a temporary directory for file paths
-@pytest
+@pytest.fixture
 def calculator():
     with TemporaryDirectory() as temp_dir:
         temp_path = Path(temp_dir)
