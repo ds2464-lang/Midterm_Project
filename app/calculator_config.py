@@ -79,7 +79,7 @@ class CalculatorConfig:
         )).resolve()
     
     @property
-    def log_files(self) -> Path:
+    def log_file(self) -> Path:
         return Path(os.getenv(
             'CALCULATOR_LOG_FILE',
             str(self.log_dir / "calculator.log")

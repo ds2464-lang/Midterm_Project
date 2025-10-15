@@ -1,0 +1,19 @@
+2025-10-15 14:42:33,689 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-15 14:42:33,690 - ERROR - Failed to load history: 'CalculatorConfig' object has no attribute 'history_file'
+2025-10-15 14:42:33,690 - WARNING - Could not load existing history: Failed to load history: 'CalculatorConfig' object has no attribute 'history_file'
+2025-10-15 14:42:33,690 - INFO - Calculator initialized with configuration
+2025-10-15 14:42:33,690 - INFO - Added observer: LoggingObserver
+2025-10-15 14:42:33,690 - INFO - Added observer: AutoSaveObserver
+2025-10-15 15:01:27,123 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-15 15:01:46,146 - ERROR - Failed to load history: 'CalculatorConfig' object has no attribute 'history_file'
+2025-10-15 15:01:47,436 - WARNING - Could not load existing history: Failed to load history: 'CalculatorConfig' object has no attribute 'history_file'
+2025-10-15 15:01:48,895 - INFO - Calculator initialized with configuration
+2025-10-15 15:01:51,599 - INFO - Added observer: LoggingObserver
+2025-10-15 15:01:55,217 - INFO - Added observer: AutoSaveObserver
+2025-10-15 15:03:52,030 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-15 15:03:52,034 - ERROR - Failed to load history: 'CalculatorConfig' object has no attribute 'history_file'
+2025-10-15 15:03:52,035 - WARNING - Could not load existing history: Failed to load history: 'CalculatorConfig' object has no attribute 'history_file'
+2025-10-15 15:03:52,036 - INFO - Calculator initialized with configuration
+2025-10-15 15:03:52,813 - INFO - Added observer: LoggingObserver
+2025-10-15 15:03:59,770 - INFO - Added observer: AutoSaveObserver
+2025-10-15 15:11:10,861 - ERROR - Failed to save history: 'CalculatorConfig' object has no attribute 'history_file'
