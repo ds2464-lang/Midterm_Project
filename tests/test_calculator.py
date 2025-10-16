@@ -1,6 +1,6 @@
 import datetime
 from pathlib import Path
-import pandas as pd
+import pandas as pd # type: ignore
 import pytest
 from unittest.mock import Mock, patch, PropertyMock, MagicMock
 from decimal import Decimal
