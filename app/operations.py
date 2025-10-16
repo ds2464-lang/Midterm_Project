@@ -14,7 +14,7 @@ class Operation(ABC):
         pass  # pragma: no cover
 
     def validate_operands(self, a: Decimal, b: Decimal) -> None:
-
+        # Base class does no validation
         pass
 
     def __str__(self) -> str:
@@ -96,6 +96,52 @@ class Root(Operation):
         return Decimal(pow(float(a), 1 / float(b)))
 
 
+# ===== New Operations =====
+
+class Modulus(Operation):
+    """Compute the remainder of division."""
+    def validate_operands(self, a: Decimal, b: Decimal) -> None:
+        super().validate_operands(a, b)
+        if b == 0:
+            raise ValidationError("Modulus by zero is not allowed")
+
+    def execute(self, a: Decimal, b: Decimal) -> Decimal:
+        self.validate_operands(a, b)
+        return a % b
+
+
+class IntegerDivision(Operation):
+    """Perform integer division discarding any fractional part."""
+    def validate_operands(self, a: Decimal, b: Decimal) -> None:
+        super().validate_operands(a, b)
+        if b == 0:
+            raise ValidationError("Integer division by zero is not allowed")
+
+    def execute(self, a: Decimal, b: Decimal) -> Decimal:
+        self.validate_operands(a, b)
+        return Decimal(a // b)
+
+
+class Percentage(Operation):
+    """Calculate the percentage of a with respect to b."""
+    def validate_operands(self, a: Decimal, b: Decimal) -> None:
+        super().validate_operands(a, b)
+        if b == 0:
+            raise ValidationError("Percentage with denominator zero is undefined")
+
+    def execute(self, a: Decimal, b: Decimal) -> Decimal:
+        self.validate_operands(a, b)
+        return (a / b) * 100
+
+
+class AbsoluteDifference(Operation):
+    """Calculate absolute difference between two numbers."""
+    def execute(self, a: Decimal, b: Decimal) -> Decimal:
+        self.validate_operands(a, b)
+        return abs(a - b)
+
+
+
 class OperationFactory:
     
 
@@ -106,7 +152,11 @@ class OperationFactory:
         'multiply': Multiplication,
         'divide': Division,
         'power': Power,
-        'root': Root
+        'root': Root,
+        'modulus': Modulus,
+        'intdiv': IntegerDivision,
+        'percentage': Percentage,
+        'absdiff': AbsoluteDifference
     }
 
     @classmethod
