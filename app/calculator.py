@@ -65,6 +65,7 @@ class Calculator:
         logging.info("Calculator initialized with configuration")
 
     def _setup_logging(self) -> None:
+
         try:
             # Ensure the log directory exists
             os.makedirs(self.config.log_dir, exist_ok=True)
@@ -84,6 +85,7 @@ class Calculator:
             raise
 
     def _setup_directories(self) -> None:
+
         self.config.history_dir.mkdir(parents=True, exist_ok=True)
 
     def add_observer(self, observer: HistoryObserver) -> None:

@@ -1,8 +1,8 @@
 import datetime
 from pathlib import Path
-import pandas as pd # type: ignore
+import pandas as pd # pyright: ignore[reportMissingModuleSource]
 import pytest
-from unittest.mock import Mock, patch, PropertyMock, MagicMock
+from unittest.mock import Mock, patch, PropertyMock
 from decimal import Decimal
 from tempfile import TemporaryDirectory
 from app.calculator import Calculator
@@ -15,7 +15,7 @@ from app.calculator_memento import CalculatorMemento
 import logging
 from app.calculation import Calculation
 
-#Fixture to initialize Calculator with a temporary directory for file paths
+# Fixture to initialize Calculator with a temporary directory for file paths
 @pytest.fixture
 def calculator():
     with TemporaryDirectory() as temp_dir:
@@ -344,6 +344,7 @@ def test_from_dict_restores_memento_correctly():
         mock_from_dict.assert_any_call(fake_data["history"][0])
         mock_from_dict.assert_any_call(fake_data["history"][1])
 
+from app.calculator_repl import calculator_repl
 
 @patch("builtins.print")
 @patch("builtins.input", side_effect=["history", "exit"])

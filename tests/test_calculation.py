@@ -6,84 +6,54 @@ from app.exceptions import OperationError
 import logging
 
 def test_addition():
-    calc = Calculation(operation="Addition", operand1=Decimal("3"), operand2=Decimal("10"))
-    assert calc.result == Decimal("13")
+    calc = Calculation(operation="Addition", operand1=Decimal("2"), operand2=Decimal("3"))
+    assert calc.result == Decimal("5")
+
 
 def test_subtraction():
-    calc = Calculation(operation="Subtraction", operand1=Decimal("10"), operand2=Decimal("3"))
-    assert calc.result == Decimal("7")
+    calc = Calculation(operation="Subtraction", operand1=Decimal("5"), operand2=Decimal("3"))
+    assert calc.result == Decimal("2")
+
 
 def test_multiplication():
-    calc = Calculation(operation="Multiplication", operand1=Decimal("3"), operand2=Decimal("10"))
-    assert calc.result == Decimal("30")
+    calc = Calculation(operation="Multiplication", operand1=Decimal("4"), operand2=Decimal("2"))
+    assert calc.result == Decimal("8")
+
 
 def test_division():
-    calc = Calculation(operation="Division", operand1=Decimal("10"), operand2=Decimal("2"))
-    assert calc.result == Decimal("5")
+    calc = Calculation(operation="Division", operand1=Decimal("8"), operand2=Decimal("2"))
+    assert calc.result == Decimal("4")
+
 
 def test_division_by_zero():
     with pytest.raises(OperationError, match="Division by zero is not allowed"):
-        Calculation(operation="Division", operand1=Decimal("10"), operand2=Decimal("0"))
+        Calculation(operation="Division", operand1=Decimal("8"), operand2=Decimal("0"))
+
 
 def test_power():
-    calc = Calculation(operation="Power", operand1=Decimal("3"), operand2=Decimal("2"))
-    assert calc.result == Decimal("9")
+    calc = Calculation(operation="Power", operand1=Decimal("2"), operand2=Decimal("3"))
+    assert calc.result == Decimal("8")
+
 
 def test_negative_power():
     with pytest.raises(OperationError, match="Negative exponents are not supported"):
-        Calculation(operation="Power", operand1=Decimal("3"), operand2=Decimal("-2"))
+        Calculation(operation="Power", operand1=Decimal("2"), operand2=Decimal("-3"))
+
 
 def test_root():
-    calc = Calculation(operation="Root", operand1=Decimal("144"), operand2=Decimal("2"))
-    assert calc.result == Decimal("12")
+    calc = Calculation(operation="Root", operand1=Decimal("16"), operand2=Decimal("2"))
+    assert calc.result == Decimal("4")
+
 
 def test_invalid_root():
     with pytest.raises(OperationError, match="Cannot calculate root of negative number"):
-        Calculation(operation="Root", operand1=Decimal("-144"), operand2=Decimal("2"))
+        Calculation(operation="Root", operand1=Decimal("-16"), operand2=Decimal("2"))
 
-def test_modulus():
-    calc = Calculation(operation="Modulus", operand1=Decimal("10"), operand2=Decimal("3"))
-    assert calc.result == Decimal("1")
-
-def test_modulus_by_zero():
-    with pytest.raises(OperationError, match="Modulus by zero is not allowed"):
-        Calculation(operation="Modulus", operand1=Decimal("10"), operand2=Decimal("0"))
-
-def test_integer_division():
-    calc = Calculation(operation="IntegerDivision", operand1=Decimal("10"), operand2=Decimal("3"))
-    assert calc.result == Decimal("3")
-
-def test_integer_division_negative():
-    calc = Calculation(operation="IntegerDivision", operand1=Decimal("-10"), operand2=Decimal("3"))
-    assert calc.result == Decimal("-3")
-
-def test_integer_division_by_zero():
-    with pytest.raises(OperationError, match="Division by zero is not allowed"):
-        Calculation(operation="IntegerDivision", operand1=Decimal("10"), operand2=Decimal("0"))
-
-def test_percentage():
-    calc = Calculation(operation="Percentage", operand1=Decimal("10"), operand2=Decimal("200"))
-    assert calc.result == Decimal("20")
-
-def test_percentage_decimal():
-    calc = Calculation(operation="Percentage", operand1=Decimal("2.5"), operand2=Decimal("80"))
-    assert calc.result == Decimal("2")
-
-def test_absolute_difference():
-    calc = Calculation(operation="AbsoluteDifference", operand1=Decimal("10"), operand2=Decimal("3"))
-    assert calc.result == Decimal("7")
-
-def test_absolute_difference_negative():
-    calc = Calculation(operation="AbsoluteDifference", operand1=Decimal("-5"), operand2=Decimal("3"))
-    assert calc.result == Decimal("8")
-
-def test_absolute_difference_zero():
-    calc = Calculation(operation="AbsoluteDifference", operand1=Decimal("7"), operand2=Decimal("7"))
-    assert calc.result == Decimal("0")
 
 def test_unknown_operation():
     with pytest.raises(OperationError, match="Unknown operation"):
-        Calculation(operation="Unknown", operand1=Decimal("10"), operand2=Decimal("3"))
+        Calculation(operation="Unknown", operand1=Decimal("5"), operand2=Decimal("3"))
+
 
 def test_failed_calculation():
     with pytest.raises(OperationError, match="Calculation failed"):
@@ -91,13 +61,13 @@ def test_failed_calculation():
 
 
 def test_to_dict():
-    calc = Calculation(operation="Addition", operand1=Decimal("10"), operand2=Decimal("3"))
+    calc = Calculation(operation="Addition", operand1=Decimal("2"), operand2=Decimal("3"))
     result_dict = calc.to_dict()
     assert result_dict == {
         "operation": "Addition",
-        "operand1": "10",
+        "operand1": "2",
         "operand2": "3",
-        "result": "13",
+        "result": "5",
         "timestamp": calc.timestamp.isoformat()
     }
 
@@ -105,16 +75,16 @@ def test_to_dict():
 def test_from_dict():
     data = {
         "operation": "Addition",
-        "operand1": "10",
+        "operand1": "2",
         "operand2": "3",
-        "result": "13",
+        "result": "5",
         "timestamp": datetime.now().isoformat()
     }
     calc = Calculation.from_dict(data)
     assert calc.operation == "Addition"
-    assert calc.operand1 == Decimal("10")
+    assert calc.operand1 == Decimal("2")
     assert calc.operand2 == Decimal("3")
-    assert calc.result == Decimal("13")
+    assert calc.result == Decimal("5")
 
 
 def test_invalid_from_dict():

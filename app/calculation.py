@@ -12,13 +12,13 @@ from app.exceptions import OperationError
 class Calculation:
 
     # Required fields
-    operation: str              # The name of the operation
-    operand1: Decimal           # The first operand in the calculation
-    operand2: Decimal           # The second operand in the calculation
+    operation: str          # The name of the operation (e.g., "Addition")
+    operand1: Decimal       # The first operand in the calculation
+    operand2: Decimal       # The second operand in the calculation
 
     # Fields with default values
-    result: Decimal = field(init=False) # The result of the calculation, computed post-initialization
-    timestamp: datetime.datetime = field(default_factory=datetime.datetime.now) # Time when the calculation was performed
+    result: Decimal = field(init=False)  # The result of the calculation, computed post-initialization
+    timestamp: datetime.datetime = field(default_factory=datetime.datetime.now)  # Time when the calculation was performed
 
     def __post_init__(self):
         """
@@ -35,42 +35,40 @@ class Calculation:
             "Division": lambda x, y: x / y if y != 0 else self._raise_div_zero(),
             "Power": lambda x, y: Decimal(pow(float(x), float(y))) if y >= 0 else self._raise_neg_power(),
             "Root": lambda x, y: (
-                Decimal(pow(float(x), 1 / float(y)))
-                if x >= 0 and y != 0
+                Decimal(pow(float(x), 1 / float(y))) 
+                if x >= 0 and y != 0 
                 else self._raise_invalid_root(x, y)
-            ),
-            "Modulus": lambda x, y: x % y if y != 0 else self._raise_div_zero(),
-            "IntegerDivision": lambda x, y: Decimal(x // y) if y != 0 else self._raise_div_zero(),
-            "Percentage": lambda x, y: (x / y) * 100 if y != 0 else self._raise_div_zero(),
-            "AbsoluteDifference": lambda x, y: abs(x - y),
+            )
         }
-        
+
         # Retrieve the operation function based on the operation name
         op = operations.get(self.operation)
         if not op:
             raise OperationError(f"Unknown operation: {self.operation}")
-        
+
         try:
-            #Execute the operation with the provided operands
+            # Execute the operation with the provided operands
             return op(self.operand1, self.operand2)
         except (InvalidOperation, ValueError, ArithmeticError) as e:
             # Handle any errors that occur during calculation
             raise OperationError(f"Calculation failed: {str(e)}")
-        
+
     @staticmethod
-    def _raise_div_zero(): # pragma: no cover
+    def _raise_div_zero():  # pragma: no cover
+
         raise OperationError("Division by zero is not allowed")
-    
+
     @staticmethod
-    def _raise_neg_power(): # pragma: no cover
+    def _raise_neg_power():  # pragma: no cover
+
         raise OperationError("Negative exponents are not supported")
-    
+
     @staticmethod
-    def _raise_invalid_root(x: Decimal, y: Decimal):
+    def _raise_invalid_root(x: Decimal, y: Decimal):  # pragma: no cover
+        if y == 0:
+            raise OperationError("Zero root is undefined")
         if x < 0:
             raise OperationError("Cannot calculate root of negative number")
-        if y == 0:
-            raise OperationError("Cannot calculate root with exponent 0")
         raise OperationError("Invalid root operation")
 
     def to_dict(self) -> Dict[str, Any]:
@@ -81,6 +79,7 @@ class Calculation:
             'result': str(self.result),
             'timestamp': self.timestamp.isoformat()
         }
+
     @staticmethod
     def from_dict(data: Dict[str, Any]) -> 'Calculation':
         try:
@@ -93,45 +92,47 @@ class Calculation:
 
             # Set the timestamp from the saved data
             calc.timestamp = datetime.datetime.fromisoformat(data['timestamp'])
-            # Verify the result mathes (helps catch data corruption)
+
+            # Verify the result matches (helps catch data corruption)
             saved_result = Decimal(data['result'])
             if calc.result != saved_result:
                 logging.warning(
-                    f"Loaded calculation result {saved_result}"
-                    f" differs from computed result {calc.result}"
-                ) # pragma: no cover
+                    f"Loaded calculation result {saved_result} "
+                    f"differs from computed result {calc.result}"
+                )  # pragma: no cover
 
             return calc
+
         except (KeyError, InvalidOperation, ValueError) as e:
             raise OperationError(f"Invalid calculation data: {str(e)}")
-        
+
     def __str__(self) -> str:
         return f"{self.operation}({self.operand1}, {self.operand2}) = {self.result}"
-    
+
     def __repr__(self) -> str:
         return (
             f"Calculation(operation='{self.operation}', "
             f"operand1={self.operand1}, "
             f"operand2={self.operand2}, "
             f"result={self.result}, "
-            f"timestamp= {self.timestamp.isoformat()}')"
+            f"timestamp='{self.timestamp.isoformat()}')"
         )
-    
+
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Calculation):
             return NotImplemented
-        return(
+        return (
             self.operation == other.operation and
             self.operand1 == other.operand1 and
             self.operand2 == other.operand2 and
             self.result == other.result
         )
-    
+
     def format_result(self, precision: int = 10) -> str:
         try:
             # Remove trailing zeros and format to specified precision
             return str(self.result.normalize().quantize(
                 Decimal('0.' + '0' * precision)
             ).normalize())
-        except InvalidOperation: # pragma: no cover
+        except InvalidOperation:  # pragma: no cover
             return str(self.result)
