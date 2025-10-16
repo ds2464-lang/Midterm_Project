@@ -12,7 +12,7 @@ from app.exceptions import OperationError
 class Calculation:
 
     # Required fields
-    operation: str              # The name of the operation (e.g., "Multiplication")
+    operation: str              # The name of the operation
     operand1: Decimal           # The first operand in the calculation
     operand2: Decimal           # The second operand in the calculation
 
