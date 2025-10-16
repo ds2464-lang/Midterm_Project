@@ -2,7 +2,7 @@ import datetime
 from pathlib import Path
 import pandas as pd # pyright: ignore[reportMissingModuleSource]
 import pytest
-from unittest.mock import Mock, patch, PropertyMock
+from unittest.mock import Mock, patch, PropertyMock, MagicMock
 from decimal import Decimal
 from tempfile import TemporaryDirectory
 from app.calculator import Calculator
