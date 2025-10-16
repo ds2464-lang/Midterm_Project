@@ -10,6 +10,10 @@ from app.operations import (
     Division,
     Power,
     Root,
+    Modulus,
+    IntegerDivision,
+    Percentage,
+    AbsoluteDifference,
     OperationFactory,
 )
 
@@ -179,6 +183,84 @@ class TestRoot(BaseOperationTest):
         },
     }
 
+from app.operations import Modulus, IntegerDivision, Percentage, AbsoluteDifference
+
+
+class TestModulus(BaseOperationTest):
+    """Test Modulus operation."""
+
+    operation_class = Modulus
+    valid_test_cases = {
+        "positive_numbers": {"a": "10", "b": "3", "expected": "1"},
+        "negative_numbers": {"a": "-10", "b": "3", "expected": "-1"},
+        "mixed_signs": {"a": "10", "b": "-3", "expected": "1"},
+        "zero_remainder": {"a": "9", "b": "3", "expected": "0"},
+        "decimals": {"a": "5.5", "b": "2", "expected": "1.5"},
+    }
+    invalid_test_cases = {
+        "modulus_by_zero": {
+            "a": "10",
+            "b": "0",
+            "error": ValidationError,
+            "message": "Division by zero not allowed in modulus"
+        },
+    }
+
+
+class TestIntegerDivision(BaseOperationTest):
+    """Test Integer Division operation."""
+
+    operation_class = IntegerDivision
+    valid_test_cases = {
+        "positive_numbers": {"a": "10", "b": "3", "expected": "3"},
+        "negative_numbers": {"a": "-10", "b": "-3", "expected": "3"},
+        "mixed_signs": {"a": "10", "b": "-3", "expected": "-4"},
+        "zero_dividend": {"a": "0", "b": "5", "expected": "0"},
+    }
+    invalid_test_cases = {
+        "divide_by_zero": {
+            "a": "5",
+            "b": "0",
+            "error": ValidationError,
+            "message": "Division by zero not allowed in integer division"
+        },
+    }
+
+
+class TestPercentage(BaseOperationTest):
+    """Test Percentage operation."""
+
+    operation_class = Percentage
+    valid_test_cases = {
+        "simple_case": {"a": "50", "b": "200", "expected": "25"},
+        "whole_percentage": {"a": "10", "b": "10", "expected": "100"},
+        "fractional_percentage": {"a": "1", "b": "8", "expected": "12.5"},
+        "large_numbers": {"a": "5e5", "b": "1e6", "expected": "50"},
+    }
+    invalid_test_cases = {
+        "percentage_by_zero": {
+            "a": "10",
+            "b": "0",
+            "error": ValidationError,
+            "message": "Division by zero not allowed in percentage"
+        },
+    }
+
+
+class TestAbsoluteDifference(BaseOperationTest):
+    """Test Absolute Difference operation."""
+
+    operation_class = AbsoluteDifference
+    valid_test_cases = {
+        "positive_difference": {"a": "10", "b": "4", "expected": "6"},
+        "negative_difference": {"a": "4", "b": "10", "expected": "6"},
+        "same_numbers": {"a": "5", "b": "5", "expected": "0"},
+        "mixed_signs": {"a": "-5", "b": "3", "expected": "8"},
+        "decimals": {"a": "5.5", "b": "3.3", "expected": "2.2"},
+    }
+    invalid_test_cases = {}  # Absolute difference has no invalid cases
+
+
 class TestOperationFactory:
     """Test OperationFactory functionality."""
 
@@ -191,7 +273,12 @@ class TestOperationFactory:
             'divide': Division,
             'power': Power,
             'root': Root,
-        }
+            'modulus': Modulus,
+            'integerdivision': IntegerDivision,
+            'percentage': Percentage,
+            'absolutedifference': AbsoluteDifference,
+}
+
 
         for op_name, op_class in operation_map.items():
             operation = OperationFactory.create_operation(op_name)
