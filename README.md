@@ -1,4 +1,6 @@
-Project: Enhanced Calculator Command-Line Application
+Project: 
+
+Enhanced Calculator Command-Line Application
 The following project is an attempt at an Enhanced Calculator Command-Line Application.
 It features a command-line interface, undo/redo, history management, and logging.
 
@@ -47,12 +49,14 @@ ssh -T git@github.com
 You should see a success message.
 
 2. Clone the Repository
+
 Now you can safely clone the course project:
 
 git clone (https://github.com/ds2464-lang/Midterm_Project.git)
 cd Midterm_Project
 
 3. Install Python 3.10+
+
 Install Python
 MacOS (Homebrew)
 brew install python
@@ -63,6 +67,7 @@ Make sure you check the box Add Python to PATH during setup.
 Verify Python:
 
 python3 --version
+
 or
 
 python --version
@@ -76,9 +81,11 @@ Install Required Packages
 pip install -r requirements.txt
 
 4. Running the Project
+
 python main.py or python3 main.py
 
 5. Command-Line Interface
+
 After running python main.py the initial greeting will show.
 It will prompt you with the following:
   1. Enter command:
@@ -105,3 +112,4 @@ Purpose of workflow tests is to:
 Automate Testing, Code Quality Checks, Dependency Management, Automated Deployment, Documentation
 and Build Checks, and Integration with GitHub Events.  In this instance it's to automatically
 test and ensure an overal coverage percentage of 90% or above.
+
