@@ -29,7 +29,7 @@ def calculator_repl():
                 if command == 'help':
                     # Display available commands
                     print("\nAvailable commands:")
-                    print("  add, subtract, multiply, divide, power, root, modulus, intdiv, percentage, absdiff - Perform calculations")
+                    print("  add, subtract, multiply, divide, power, root, mod, intdiv, percentage, absdiff - Perform calculations")
                     print("  history - Show calculation history")
                     print("  clear - Clear calculation history")
                     print("  undo - Undo the last calculation")
@@ -100,7 +100,7 @@ def calculator_repl():
                         print(f"Error loading history: {e}")
                     continue # pragma: no cover
 
-                if command in ['add', 'subtract', 'multiply', 'divide', 'power', 'root']:
+                if command in ['add', 'subtract', 'multiply', 'divide', 'power', 'root', 'mod', 'intdiv', 'percentage', 'absdiff']:
                     # Perform the specified arithmetic operation
                     try:
                         print("\nEnter numbers (or 'cancel' to abort):")

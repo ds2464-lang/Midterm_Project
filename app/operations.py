@@ -103,7 +103,7 @@ class Modulus(Operation):
     def validate_operands(self, a: Decimal, b: Decimal) -> None:
         super().validate_operands(a, b)
         if b == 0:
-            raise ValidationError("Modulus by zero is not allowed")
+            raise ValidationError("Division by zero not allowed in modulus")
 
     def execute(self, a: Decimal, b: Decimal) -> Decimal:
         self.validate_operands(a, b)
@@ -115,7 +115,7 @@ class IntegerDivision(Operation):
     def validate_operands(self, a: Decimal, b: Decimal) -> None:
         super().validate_operands(a, b)
         if b == 0:
-            raise ValidationError("Integer division by zero is not allowed")
+            raise ValidationError("Division by zero not allowed in integer division")
 
     def execute(self, a: Decimal, b: Decimal) -> Decimal:
         self.validate_operands(a, b)
@@ -127,7 +127,7 @@ class Percentage(Operation):
     def validate_operands(self, a: Decimal, b: Decimal) -> None:
         super().validate_operands(a, b)
         if b == 0:
-            raise ValidationError("Percentage with denominator zero is undefined")
+            raise ValidationError("Division by zero not allowed in percentage.")
 
     def execute(self, a: Decimal, b: Decimal) -> Decimal:
         self.validate_operands(a, b)
@@ -153,7 +153,7 @@ class OperationFactory:
         'divide': Division,
         'power': Power,
         'root': Root,
-        'modulus': Modulus,
+        'mod': Modulus,
         'intdiv': IntegerDivision,
         'percentage': Percentage,
         'absdiff': AbsoluteDifference

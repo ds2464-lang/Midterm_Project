@@ -344,8 +344,6 @@ def test_from_dict_restores_memento_correctly():
         mock_from_dict.assert_any_call(fake_data["history"][0])
         mock_from_dict.assert_any_call(fake_data["history"][1])
 
-from app.calculator_repl import calculator_repl
-
 @patch("builtins.print")
 @patch("builtins.input", side_effect=["history", "exit"])
 def test_repl_history_no_entries(mock_input, mock_print):

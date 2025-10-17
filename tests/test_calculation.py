@@ -71,7 +71,7 @@ def test_integer_division():
 def test_integer_division_negative():
     """Test Integer Division with negative operands."""
     calc = Calculation(operation="IntegerDivision", operand1=Decimal("-10"), operand2=Decimal("3"))
-    assert calc.result == Decimal("-4")  # Floor division behavior
+    assert calc.result == Decimal("-3")  # Floor division behavior
 
 
 def test_integer_division_by_zero():

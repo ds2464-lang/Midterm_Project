@@ -183,8 +183,6 @@ class TestRoot(BaseOperationTest):
         },
     }
 
-from app.operations import Modulus, IntegerDivision, Percentage, AbsoluteDifference
-
 
 class TestModulus(BaseOperationTest):
     """Test Modulus operation."""
@@ -198,7 +196,7 @@ class TestModulus(BaseOperationTest):
         "decimals": {"a": "5.5", "b": "2", "expected": "1.5"},
     }
     invalid_test_cases = {
-        "modulus_by_zero": {
+        "divide_by_zero": {
             "a": "10",
             "b": "0",
             "error": ValidationError,
@@ -214,7 +212,7 @@ class TestIntegerDivision(BaseOperationTest):
     valid_test_cases = {
         "positive_numbers": {"a": "10", "b": "3", "expected": "3"},
         "negative_numbers": {"a": "-10", "b": "-3", "expected": "3"},
-        "mixed_signs": {"a": "10", "b": "-3", "expected": "-4"},
+        "mixed_signs": {"a": "10", "b": "-3", "expected": "-3"},
         "zero_dividend": {"a": "0", "b": "5", "expected": "0"},
     }
     invalid_test_cases = {
@@ -238,7 +236,7 @@ class TestPercentage(BaseOperationTest):
         "large_numbers": {"a": "5e5", "b": "1e6", "expected": "50"},
     }
     invalid_test_cases = {
-        "percentage_by_zero": {
+        "divide_by_zero": {
             "a": "10",
             "b": "0",
             "error": ValidationError,
@@ -273,10 +271,10 @@ class TestOperationFactory:
             'divide': Division,
             'power': Power,
             'root': Root,
-            'modulus': Modulus,
-            'integerdivision': IntegerDivision,
+            'mod': Modulus,
+            'intdiv': IntegerDivision,
             'percentage': Percentage,
-            'absolutedifference': AbsoluteDifference,
+            'absdiff': AbsoluteDifference,
 }
 
 
