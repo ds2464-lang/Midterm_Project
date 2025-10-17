@@ -1758,3 +1758,199 @@
 2025-10-16 20:36:22,945 - INFO - Calculator initialized with configuration
 2025-10-16 20:36:22,945 - INFO - Added observer: LoggingObserver
 2025-10-16 20:36:22,945 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:38:32,910 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:38:32,911 - INFO - Calculator initialized with configuration
+2025-10-16 20:38:32,937 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:38:32,941 - INFO - Loaded 16 calculations from history
+2025-10-16 20:38:32,942 - INFO - Calculator initialized with configuration
+2025-10-16 20:38:32,942 - INFO - Added observer: LoggingObserver
+2025-10-16 20:38:32,942 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:38:32,946 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:38:32,949 - INFO - Loaded 16 calculations from history
+2025-10-16 20:38:32,950 - INFO - Calculator initialized with configuration
+2025-10-16 20:38:32,950 - INFO - Added observer: LoggingObserver
+2025-10-16 20:38:32,950 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:38:32,953 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:38:32,955 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:38:32,959 - INFO - Loaded 16 calculations from history
+2025-10-16 20:38:32,959 - INFO - Calculator initialized with configuration
+2025-10-16 20:38:32,959 - INFO - Added observer: LoggingObserver
+2025-10-16 20:38:32,959 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:38:32,960 - INFO - Set operation: Addition
+2025-10-16 20:38:32,960 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-10-16 20:38:32,964 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:38:32,964 - INFO - History auto-saved
+2025-10-16 20:38:32,966 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:38:32,972 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:38:32,976 - INFO - Loaded 17 calculations from history
+2025-10-16 20:38:32,976 - INFO - Calculator initialized with configuration
+2025-10-16 20:38:32,976 - INFO - Added observer: LoggingObserver
+2025-10-16 20:38:32,976 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:39:35,616 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:39:35,617 - INFO - Calculator initialized with configuration
+2025-10-16 20:39:35,645 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:39:35,649 - INFO - Loaded 17 calculations from history
+2025-10-16 20:39:35,649 - INFO - Calculator initialized with configuration
+2025-10-16 20:39:35,649 - INFO - Added observer: LoggingObserver
+2025-10-16 20:39:35,649 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:39:35,652 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:39:35,656 - INFO - Loaded 17 calculations from history
+2025-10-16 20:39:35,656 - INFO - Calculator initialized with configuration
+2025-10-16 20:39:35,656 - INFO - Added observer: LoggingObserver
+2025-10-16 20:39:35,656 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:39:35,660 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:39:35,662 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:39:35,666 - INFO - Loaded 17 calculations from history
+2025-10-16 20:39:35,666 - INFO - Calculator initialized with configuration
+2025-10-16 20:39:35,666 - INFO - Added observer: LoggingObserver
+2025-10-16 20:39:35,666 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:39:35,666 - INFO - Set operation: Addition
+2025-10-16 20:39:35,666 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-10-16 20:39:35,668 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:39:35,668 - INFO - History auto-saved
+2025-10-16 20:39:35,670 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:39:35,677 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:39:35,681 - INFO - Loaded 18 calculations from history
+2025-10-16 20:39:35,681 - INFO - Calculator initialized with configuration
+2025-10-16 20:39:35,681 - INFO - Added observer: LoggingObserver
+2025-10-16 20:39:35,681 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:40:10,015 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:40:10,016 - INFO - Calculator initialized with configuration
+2025-10-16 20:40:10,043 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:40:10,049 - INFO - Loaded 18 calculations from history
+2025-10-16 20:40:10,049 - INFO - Calculator initialized with configuration
+2025-10-16 20:40:10,050 - INFO - Added observer: LoggingObserver
+2025-10-16 20:40:10,050 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:40:10,054 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:40:10,058 - INFO - Loaded 18 calculations from history
+2025-10-16 20:40:10,058 - INFO - Calculator initialized with configuration
+2025-10-16 20:40:10,058 - INFO - Added observer: LoggingObserver
+2025-10-16 20:40:10,058 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:40:10,062 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:40:10,065 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:40:10,070 - INFO - Loaded 18 calculations from history
+2025-10-16 20:40:10,070 - INFO - Calculator initialized with configuration
+2025-10-16 20:40:10,070 - INFO - Added observer: LoggingObserver
+2025-10-16 20:40:10,070 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:40:10,070 - INFO - Set operation: Addition
+2025-10-16 20:40:10,070 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-10-16 20:40:10,073 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:40:10,073 - INFO - History auto-saved
+2025-10-16 20:40:10,075 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:40:10,082 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:40:10,086 - INFO - Loaded 19 calculations from history
+2025-10-16 20:40:10,086 - INFO - Calculator initialized with configuration
+2025-10-16 20:40:10,086 - INFO - Added observer: LoggingObserver
+2025-10-16 20:40:10,086 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:45:07,045 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:45:07,045 - INFO - Calculator initialized with configuration
+2025-10-16 20:45:07,075 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:45:07,080 - INFO - Loaded 19 calculations from history
+2025-10-16 20:45:07,080 - INFO - Calculator initialized with configuration
+2025-10-16 20:45:07,080 - INFO - Added observer: LoggingObserver
+2025-10-16 20:45:07,080 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:45:07,083 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:45:07,088 - INFO - Loaded 19 calculations from history
+2025-10-16 20:45:07,088 - INFO - Calculator initialized with configuration
+2025-10-16 20:45:07,088 - INFO - Added observer: LoggingObserver
+2025-10-16 20:45:07,088 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:45:07,094 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:45:07,096 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:45:07,100 - INFO - Loaded 19 calculations from history
+2025-10-16 20:45:07,100 - INFO - Calculator initialized with configuration
+2025-10-16 20:45:07,100 - INFO - Added observer: LoggingObserver
+2025-10-16 20:45:07,100 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:45:07,100 - INFO - Set operation: Addition
+2025-10-16 20:45:07,101 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-10-16 20:45:07,103 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:45:07,103 - INFO - History auto-saved
+2025-10-16 20:45:07,105 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:45:07,112 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:45:07,116 - INFO - Loaded 20 calculations from history
+2025-10-16 20:45:07,117 - INFO - Calculator initialized with configuration
+2025-10-16 20:45:07,117 - INFO - Added observer: LoggingObserver
+2025-10-16 20:45:07,117 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:46:27,717 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:46:27,718 - INFO - Calculator initialized with configuration
+2025-10-16 20:46:27,756 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:46:27,761 - INFO - Loaded 20 calculations from history
+2025-10-16 20:46:27,761 - INFO - Calculator initialized with configuration
+2025-10-16 20:46:27,761 - INFO - Added observer: LoggingObserver
+2025-10-16 20:46:27,761 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:46:27,764 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:46:27,768 - INFO - Loaded 20 calculations from history
+2025-10-16 20:46:27,769 - INFO - Calculator initialized with configuration
+2025-10-16 20:46:27,769 - INFO - Added observer: LoggingObserver
+2025-10-16 20:46:27,769 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:46:27,773 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:46:27,776 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:46:27,781 - INFO - Loaded 20 calculations from history
+2025-10-16 20:46:27,781 - INFO - Calculator initialized with configuration
+2025-10-16 20:46:27,781 - INFO - Added observer: LoggingObserver
+2025-10-16 20:46:27,781 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:46:27,781 - INFO - Set operation: Addition
+2025-10-16 20:46:27,782 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-10-16 20:46:27,784 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:46:27,784 - INFO - History auto-saved
+2025-10-16 20:46:27,786 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:46:27,792 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:46:27,798 - INFO - Loaded 21 calculations from history
+2025-10-16 20:46:27,798 - INFO - Calculator initialized with configuration
+2025-10-16 20:46:27,798 - INFO - Added observer: LoggingObserver
+2025-10-16 20:46:27,798 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:56:40,640 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:56:40,641 - INFO - Calculator initialized with configuration
+2025-10-16 20:56:40,679 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:56:40,684 - INFO - Loaded 21 calculations from history
+2025-10-16 20:56:40,684 - INFO - Calculator initialized with configuration
+2025-10-16 20:56:40,685 - INFO - Added observer: LoggingObserver
+2025-10-16 20:56:40,685 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:56:40,688 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:56:40,692 - INFO - Loaded 21 calculations from history
+2025-10-16 20:56:40,692 - INFO - Calculator initialized with configuration
+2025-10-16 20:56:40,692 - INFO - Added observer: LoggingObserver
+2025-10-16 20:56:40,692 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:56:40,696 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:56:40,699 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:56:40,705 - INFO - Loaded 21 calculations from history
+2025-10-16 20:56:40,706 - INFO - Calculator initialized with configuration
+2025-10-16 20:56:40,706 - INFO - Added observer: LoggingObserver
+2025-10-16 20:56:40,706 - INFO - Added observer: AutoSaveObserver
+2025-10-16 20:56:40,706 - INFO - Set operation: Addition
+2025-10-16 20:56:40,706 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-10-16 20:56:40,709 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:56:40,709 - INFO - History auto-saved
+2025-10-16 20:56:40,711 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 20:56:40,717 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 20:56:40,723 - INFO - Loaded 22 calculations from history
+2025-10-16 20:56:40,723 - INFO - Calculator initialized with configuration
+2025-10-16 20:56:40,723 - INFO - Added observer: LoggingObserver
+2025-10-16 20:56:40,723 - INFO - Added observer: AutoSaveObserver
+2025-10-16 21:03:09,183 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 21:03:09,185 - INFO - Calculator initialized with configuration
+2025-10-16 21:03:09,215 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 21:03:09,220 - INFO - Loaded 22 calculations from history
+2025-10-16 21:03:09,220 - INFO - Calculator initialized with configuration
+2025-10-16 21:03:09,220 - INFO - Added observer: LoggingObserver
+2025-10-16 21:03:09,221 - INFO - Added observer: AutoSaveObserver
+2025-10-16 21:03:09,225 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 21:03:09,229 - INFO - Loaded 22 calculations from history
+2025-10-16 21:03:09,229 - INFO - Calculator initialized with configuration
+2025-10-16 21:03:09,229 - INFO - Added observer: LoggingObserver
+2025-10-16 21:03:09,229 - INFO - Added observer: AutoSaveObserver
+2025-10-16 21:03:09,234 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 21:03:09,237 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 21:03:09,241 - INFO - Loaded 22 calculations from history
+2025-10-16 21:03:09,241 - INFO - Calculator initialized with configuration
+2025-10-16 21:03:09,241 - INFO - Added observer: LoggingObserver
+2025-10-16 21:03:09,241 - INFO - Added observer: AutoSaveObserver
+2025-10-16 21:03:09,242 - INFO - Set operation: Addition
+2025-10-16 21:03:09,242 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-10-16 21:03:09,244 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 21:03:09,244 - INFO - History auto-saved
+2025-10-16 21:03:09,246 - INFO - History saved successfully to /home/dsilva/Midterm_Project/history/calculator_history.csv
+2025-10-16 21:03:09,252 - INFO - Logging initialized at: /home/dsilva/Midterm_Project/logs/calculator.log
+2025-10-16 21:03:09,257 - INFO - Loaded 23 calculations from history
+2025-10-16 21:03:09,257 - INFO - Calculator initialized with configuration
+2025-10-16 21:03:09,257 - INFO - Added observer: LoggingObserver
+2025-10-16 21:03:09,257 - INFO - Added observer: AutoSaveObserver

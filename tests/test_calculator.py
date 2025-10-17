@@ -8,7 +8,7 @@ from tempfile import TemporaryDirectory
 from app.calculator import Calculator
 from app.calculator_repl import calculator_repl
 from app.calculator_config import CalculatorConfig
-from app.exceptions import OperationError, ValidationError
+from app.exceptions import OperationError, ValidationError, ConfigurationError
 from app.history import LoggingObserver, AutoSaveObserver
 from app.operations import OperationFactory
 from app.calculator_memento import CalculatorMemento
@@ -206,7 +206,6 @@ def test_save_history_empty_logs_and_creates_empty_csv(tmp_path, calculator):
     # Arrange
     calculator.history = []  # simulate empty history
     calculator.config.history_file = tmp_path / "history.csv"
-
     with patch("app.calculator.logging.info") as mock_log, \
          patch("pandas.DataFrame.to_csv") as mock_to_csv:
 
